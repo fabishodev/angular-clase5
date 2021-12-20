@@ -1,0 +1,23 @@
+<h3>Paises</h3><hr>
+
+<div class="row">
+    <div class="col">
+        <app-paises-input
+        (onEnter)="buscar($event)"
+        placeholder="Buscar por Paises"
+        ></app-paises-input>
+    </div>
+</div>
+
+<hr>
+<div *ngIf="error" class="alert alert-danger">
+    sin resultados para el termino
+</div>
+<div class="row">
+    <div class="col">
+        <app-paises-tabla [paises]="paises">
+
+        </app-paises-tabla>
+    </div>
+</div>
+
